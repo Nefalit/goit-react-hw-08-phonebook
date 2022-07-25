@@ -5,7 +5,7 @@ import PrivateRoute from './shared/components/PrivateRoute/PrivateRoute';
 import PublicRoute from './shared/components/PublicRoute/PublicRoute';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
-const RegisterPage = lazy(() => import('./pages/RegisterPage/RegisterPage'));
+const RegisterPage = lazy(() => import('./pages/RegisterPage/Registerpage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage/ContactsPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
