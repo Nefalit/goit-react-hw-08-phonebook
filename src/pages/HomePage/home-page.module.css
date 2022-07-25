@@ -1,0 +1,12 @@
+.title{
+    color: blue;
+    text-align: center;
+    margin-top: 50px;
+}
+.imgWrapper{
+    margin: 150px auto;
+    width: 450px;
+    height: 450px;
+    background-image: url(../../img/phonebook.jpg);
+    border-radius: 50px;
+}
