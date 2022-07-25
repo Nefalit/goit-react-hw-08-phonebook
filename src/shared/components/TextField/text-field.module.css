@@ -5,12 +5,17 @@
 }
 
 .label {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     width: 100px;
     padding-right: 15px;
+    color: blue;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .input {
     padding: 5px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: blue;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(177, 230, 231);
 }

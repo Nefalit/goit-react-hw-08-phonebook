@@ -40,11 +40,11 @@ const authSlice = createSlice({
     [logout.fulfilled]: () => ({ ...initialState }),
     [logout.rejected]: rejected,
     [getCurrent.pending]: pending,
-    [getCurrent.fulfilled]: (store, {payload}) => {
+    [getCurrent.fulfilled]: (store, { payload }) => {
       store.loading = false;
       store.user = payload;
       store.isLogin = true;
-  },
+    },
     [getCurrent.rejected]: rejected,
   },
 });

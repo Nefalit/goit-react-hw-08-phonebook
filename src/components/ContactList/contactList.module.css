@@ -1,10 +1,13 @@
 .wrapper {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  margin: 0 auto;
+  margin: 30px auto;
   max-width: 450px;
   align-items: center;
 }
 .list {
   padding: 0px;
+  border: 2px solid blue;
+  border-radius: 15px;
+  color: blue;
 }

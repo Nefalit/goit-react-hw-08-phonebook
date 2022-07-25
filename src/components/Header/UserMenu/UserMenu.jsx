@@ -14,8 +14,9 @@ const UserMenu = () => {
   };
 
   return (
-    <div>
-      {email} |
+    <div className={s.wrapper}>
+      <p className={s.mail}>{email}</p>
+      <span className={s.stick}>|</span>
       <button className={s.btn} onClick={onLogout}>
         Logout
       </button>

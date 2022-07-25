@@ -9,7 +9,7 @@ const getClassName = ({isActive}) => {
 const HeaderAuth = ()=> {
     return (
         <div>
-            <NavLink to="/login" className={getClassName}>Login</NavLink> | <NavLink to="/register" className={getClassName}>Register</NavLink>
+            <NavLink to="/login" className={getClassName}>Login</NavLink> <span className={s.stick}>|</span><NavLink to="/register" className={getClassName}>Registration</NavLink>
         </div>
     )
 }

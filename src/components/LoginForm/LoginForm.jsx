@@ -6,6 +6,7 @@ import TextField from "../../shared/components/TextField/TextField";
 
 import { initialState } from "./initialState";
 import { fields } from "./fields";
+import s from "./login-form.module.css"
 
 const LoginForm = ({ onSubmit }) => {
     const { state, handleChange, handleSubmit } = useForm({ onSubmit, initialState });
@@ -13,10 +14,10 @@ const LoginForm = ({ onSubmit }) => {
     const { email, password } = state;
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className={s.form} onSubmit={handleSubmit}>
             <TextField value={email} onChange={handleChange} {...fields.email} />
             <TextField value={password} onChange={handleChange} {...fields.password} />
-            <button type="submit">Login</button>
+            <button className={s.btn} type="submit">Login</button>
         </form>
     )
 }

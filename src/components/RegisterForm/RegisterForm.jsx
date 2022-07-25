@@ -27,7 +27,7 @@ const RegisterForm = ({ onSubmit }) => {
         {...fields.password}
       />
       <button className={s.btn} type="submit">
-        Register
+        Singup
       </button>
     </form>
   );

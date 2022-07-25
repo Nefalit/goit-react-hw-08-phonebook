@@ -9,7 +9,10 @@ export const signup = createAsyncThunk(
       const result = await api.signup(data);
       return result;
     } catch (error) {
-      return rejectWithValue(error);
+      const { data, status } = error.response;
+      const { message: messageForUser } = error.response.data;
+      const { message } = error;
+      return rejectWithValue({ message, messageForUser, data, status });
     }
   }
 );
@@ -21,7 +24,11 @@ export const login = createAsyncThunk(
       const result = await api.login(data);
       return result;
     } catch (error) {
-      return rejectWithValue(error);
+      const { data, status } = error.response;
+      const { message } = error;
+
+      console.log(error);
+      return rejectWithValue({ data, status, message });
     }
   }
 );

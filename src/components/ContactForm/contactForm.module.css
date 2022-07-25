@@ -8,15 +8,22 @@
     flex-direction: column;
     border: 2px solid black;
     align-items: center;
+    border-color: transparent;
 }
 .label{
     display: flex;
     flex-direction: column;
+    color: blue;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .input{
-    width: 250px;
-    margin-bottom: 10px;
+    width: 344px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: blue;
+    background-color: rgb(177, 230, 231);
 }
 
 .btn{
@@ -26,6 +33,9 @@
     border-radius: 5px;
     border: 1px solid transparent;
     cursor: pointer;
+    font-size: 16px;
+    color: blue;
+    font-weight: 600;
 }
 
 .btn:active{
