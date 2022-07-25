@@ -1,4 +1,4 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createAction } from '@reduxjs/toolkit';
 
 import * as api from '../../shared/api/auth';
 
@@ -26,8 +26,6 @@ export const login = createAsyncThunk(
     } catch (error) {
       const { data, status } = error.response;
       const { message } = error;
-
-      console.log(error);
       return rejectWithValue({ data, status, message });
     }
   }
@@ -65,3 +63,5 @@ export const getCurrent = createAsyncThunk(
     },
   }
 );
+
+export const zeroingErr = createAction('auth/zero')

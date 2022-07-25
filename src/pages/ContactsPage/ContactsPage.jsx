@@ -5,6 +5,7 @@ import ContactForm from '../../components/ContactForm/ContactForm';
 import Filter from '../../components/Filter/Filter';
 import ContactList from '../../components/ContactList/ContactList';
 
+
 import {
   addContact,
   removeContact,
@@ -13,11 +14,14 @@ import {
 import { toFilter } from '../../redux/filter/filter-slice';
 import { getContacts } from '../../redux/contacts/contacts-selector';
 import { getFilter } from '../../redux/filter/filter-selector';
+import { getUser } from '../../redux/auth/auth-selectors';
+
 
 const ContactsPage = () => {
   const filter = useSelector(getFilter);
   const { items, loading, error } = useSelector(getContacts);
   const dispatch = useDispatch();
+  const {name} = useSelector(getUser)
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -51,7 +55,7 @@ const ContactsPage = () => {
   return (
     <main>
       <div className="container">
-        <h1 className="titleOne">Phonebook</h1>
+        <h1 className="titleOne">It's good to see you {name} !</h1>
         <ContactForm onSubmit={addContactFunc} />
         <Filter value={filter} onChange={handleFilter} />
         {loading && <p className="loading">...Loading</p>}

@@ -1,6 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { signup, login, logout, getCurrent } from './auth-operations';
+import {
+  signup,
+  login,
+  logout,
+  getCurrent,
+  zeroingErr,
+} from './auth-operations';
 
 const initialState = {
   user: {},
@@ -46,6 +52,10 @@ const authSlice = createSlice({
       store.isLogin = true;
     },
     [getCurrent.rejected]: rejected,
+    [zeroingErr]: store => ({
+      ...store,
+      error: null,
+    }),
   },
 });
 
