@@ -4,7 +4,7 @@ import s from './filter.module.css';
 const Filter = ({ value, onChange }) => {
   return (
     <div className={s.wrapper}>
-      <h2 className={s.titleTwo}>Contacts</h2>
+      <h2 className={s.titleTwo}>Your contacts</h2>
       <label className={s.label}>
         Find contacts by name
         <input

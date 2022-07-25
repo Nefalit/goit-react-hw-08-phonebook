@@ -1,10 +1,10 @@
 .title{
     color: blue;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .imgWrapper{
-    margin: 150px auto;
+    margin: 100px auto;
     width: 450px;
     height: 450px;
     background-image: url(../../img/phonebook.jpg);
